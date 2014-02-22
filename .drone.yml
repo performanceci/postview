@@ -1,0 +1,14 @@
+image: bradrydzewski/base
+env:
+  #- GOPATH=/var/cache/drone
+script:
+  - gem install postview
+  - rake test
+  - echo "foo bar baz bold"
+services:
+  #- redis
+notify:
+  email:
+    recipients:
+      #- brad@drone.io
+      #- burke@drone.io
